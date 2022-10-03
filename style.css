@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: rgb(121, 118, 118);
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+}
+
+/* Custom Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+} 
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: rgba(0,0,0,0.9);
+}
+
+.btn {
+    padding: 12px 18px;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.hero {
+    background-image: url(./cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21,20,51,0.8);
+    z-index: -1;
+}
+
+section {
+    padding: 120px 0 120px 0;
+}
+
+.card-effect {
+    box-shadow: var( --box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.card-effect:hover {
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    flex: none;
+}
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service:hover .iconbox {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: #fff;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.col-img {
+    background-image: url(./features.avif);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.pricing i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.pricing {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.pricing::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.pricing:hover i {
+    color: #fff;
+}
+
+.pricing:hover h6,
+.pricing:hover h1,
+.pricing:hover li {
+    color: #fff;
+}
+
+.pricing:hover button {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.pricing:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border: transparent;
+    /* border-radius: 0; */
+    background-color: rgba(0,0,0,0.20);
+}
+
+
